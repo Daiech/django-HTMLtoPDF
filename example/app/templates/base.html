@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+		<title>Django HTML to PDF</title>
+    	<link rel="shortcut icon" href="http://getbootstrap.com/assets/ico/favicon.png">
+    	<link href="http://getbootstrap.com/dist/css/bootstrap.css" rel="stylesheet">
+    	<link href="http://getbootstrap.com/examples/sticky-footer-navbar/sticky-footer-navbar.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="navbar navbar-default navbar-fixed-top">
+	        	<div class="container">
+				  <div class="navbar-header">
+				    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				      <span class="icon-bar"></span>
+				      <span class="icon-bar"></span>
+				      <span class="icon-bar"></span>
+				    </button>
+				    <a class="navbar-brand" href="/">Django HTML to PDF</a>
+				  </div>
+				  <div class="collapse navbar-collapse">
+				      <ul class="nav navbar-nav">
+				          <li class="dropdown" id="menu-explore">
+				              <a href="#" role="button">Docs</a>
+				          </li>
+				      </ul>
+				  </div><!--/.nav-collapse -->
+				</div>
+	        </div>
+		    <div class="container">
+				{% block content %}
+				{% endblock %}
+			</div>
+		</div>
+		<div id="footer">
+	      <div class="container">
+	        <p class="text-muted credit">
+	            <a href="http://daiech.com">Daiech.com</a> <script>document.write((new Date()).getFullYear())</script>
+	        </p>
+	      </div>
+	    </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+		{% block js %}	
+		{% endblock %}
+	</body>
+</html>

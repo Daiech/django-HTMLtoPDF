@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="data" style="border:solid thin gray">
+    <h1>Este es mi contenido</h1>
+    <table class="table">
+    	<tr>
+    		<th>Nombre</th>
+    		<th>Apellido</th>
+    	</tr>
+    	<tr>
+    		<td>Mauricio</td>
+    		<td>Aizaga</td>
+    	</tr>
+    	<tr>
+    		<td>Lina</td>
+    		<td>Aguirre</td>
+    	</tr>
+    </table>
+</div>
+<hr>
+<form action="{% url 'html_to_pdf' %}" method="post" id="form-html-data">
+    {% csrf_token %}
+	<input type="hidden" name="pdf_name" id="pdf_name" value="mi pdf">
+	<textarea name="html_data" id="html_data" style="display:none;"></textarea>
+	<button type="submit" class="btn btn-success">Generar PDF</button>
+</form>
+{% endblock %}
+{% block js %}	
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#form-html-data").on("submit", function (e){
+            e.preventDefault();
+            //you can modifie your html before send to pdf:
+            $("#data .table").attr("border", "1");
+            var link = 'Buajajajaja'
+            var data = link + $("#data").html();
+            $("#html_data").val(data); // Copy your HTML data to textarea
+            
+            this.submit();
+        })
+	});
+</script>
+{% endblock %}
