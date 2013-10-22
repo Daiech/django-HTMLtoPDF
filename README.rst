@@ -2,9 +2,18 @@
 Django Html to PDF
 ==================
 
-Django PDF is a simple Django app to create PDF files from Html using xhtml2pdf.
+A simple Django app to create PDF files from Html using xhtml2pdf.
 
 Detailed documentation is in the "docs" directory.
+
+
+Instalation
+-----------
+
+1. Enter to django_htmlToPDF directory and run:
+      python setup.py install
+      pip install -r requirements.py
+
 
 Quick start
 -----------
@@ -18,7 +27,7 @@ Quick start
 
 2. Include the polls URLconf in your project urls.py like this::
 
-      url(r'^pdf/', include('django_htmlToPDF.urls')),
+      url(r'^pdf/', include("django_htmlToPDF.urls")),
 
 3. django_htmlToPDF needs HTTP POST method to run, be sure to send a POST method with two params:
 	pdf_name	: The name for your PDF file (optional)
