@@ -1,4 +1,3 @@
-==================
 Django Html to PDF
 ==================
 
@@ -11,9 +10,11 @@ Instalation
 -----------
 
 1. Download source from Github:
-	git clone git@github.com:Daiech/django-HTMLtoPDF.git
+
+    git clone git@github.com:Daiech/django-HTMLtoPDF.git
 
 2. Enter to django_htmlToPDF directory and run:
+
     python setup.py install
     pip install -r requirements.py
 
