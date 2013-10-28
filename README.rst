@@ -6,8 +6,7 @@ A simple Django app to create PDF files from Html using xhtml2pdf.
 Detailed documentation is in the "docs" directory.
 
 
-Instalation
------------
+# Instalation
 
 1) Download source from Github:
 
@@ -18,11 +17,9 @@ Instalation
     python setup.py install
     pip install -r requirements.py
 
+# Quick start
 
-Quick start
------------
-
-1.) Add "django_htmlToPDF" to your INSTALLED_APPS setting like this::
+1) Add "django_htmlToPDF" to your INSTALLED_APPS setting like this::
 
     INSTALLED_APPS = (
         ...
